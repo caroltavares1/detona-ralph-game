@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+
+:root {
+  --background: #000;
+  --scores: #fff;
+  --text: #f00;
+  --border: #daa520;
+  --square: #2cd59d;
+}
+
+.menu-time > :first-child,
+.menu-score > :first-child {
+  color: var(--text);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--background);
+  width: 100%;
+  height: 10vh;
+  border-bottom: 5px solid var(--border);
+}
+
+.menu-lives {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu-time,
+.menu-score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#time-left,
+#score,
+.menu-lives > h2 {
+  color: var(--scores);
+}
+
+main {
+  height: 90vh;
+  background-image: url("../images/wall.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enemy {
+  background: url("../images/ralph.png") no-repeat left/cover;
+  background-color: var(--text);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: var(--square);
+  border: 1px solid var(--background);
+  cursor: pointer;
+  /* Ajuste a altura conforme necessário */
+}
